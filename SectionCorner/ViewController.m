@@ -39,13 +39,8 @@
     UIView *view = [[UIView alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 30)];
     view.backgroundColor = [UIColor blueColor];
     
-    //圆角
-    UIBezierPath *maskPath = [UIBezierPath bezierPathWithRoundedRect:view.bounds byRoundingCorners:UIRectCornerTopLeft | UIRectCornerTopRight cornerRadii:CGSizeMake(30, 30)];
-    CAShapeLayer *maskLayer = [[CAShapeLayer alloc] init];
-    maskLayer.frame = view.bounds;
-    maskLayer.path = maskPath.CGPath;
-    view.layer.mask = maskLayer;
-    
+
+    [self shadow:view];
     return section == 1 ? view : nil;
 
 }
@@ -81,6 +76,7 @@
             maskLayer.frame = cell.bounds;
             maskLayer.path = maskPath.CGPath;
             cell.layer.mask = maskLayer;
+            
         }
     }
     
@@ -88,12 +84,29 @@
 #pragma mark lazy
 -(UITableView *)tableView {
     if (!_tableView) {
-        _tableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height) style:UITableViewStylePlain];
+        _tableView = [[UITableView alloc]initWithFrame:CGRectMake(50, 0, self.view.frame.size.width - 100, self.view.frame.size.height) style:UITableViewStylePlain];
         _tableView.delegate = self;
         _tableView.dataSource = self;
         _tableView.backgroundColor = [UIColor clearColor];
         [_tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cellid"];
+        [self shadow:_tableView];
     }
     return _tableView;
+}
+
+
+-(void)shadow:(UIView *)topView {
+    topView.layer.masksToBounds = NO;
+    topView.layer.shadowOffset = CGSizeMake(0, -6);
+    topView.layer.shadowOpacity = 0.3;
+    topView.layer.shadowRadius = 6;
+    topView.layer.shadowColor = [UIColor yellowColor].CGColor;
+//    topView.layer.cornerRadius = 15;
+    //圆角
+        UIBezierPath *maskPath = [UIBezierPath bezierPathWithRoundedRect:topView.bounds byRoundingCorners:UIRectCornerTopLeft | UIRectCornerTopRight cornerRadii:CGSizeMake(30, 30)];
+        CAShapeLayer *maskLayer = [[CAShapeLayer alloc] init];
+        maskLayer.frame = topView.bounds;
+        maskLayer.path = maskPath.CGPath;
+        topView.layer.mask = maskLayer;
 }
 @end
