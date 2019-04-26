@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B7F5B3A022730F0200A60953 /* TextCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B7F5B39F22730F0200A60953 /* TextCell.m */; };
+		B7F5B3A322730F4700A60953 /* UIView+Shadow.m in Sources */ = {isa = PBXBuildFile; fileRef = B7F5B3A222730F4700A60953 /* UIView+Shadow.m */; };
 		D43050852270AE4A00DBC47A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D43050842270AE4A00DBC47A /* AppDelegate.m */; };
 		D43050882270AE4A00DBC47A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D43050872270AE4A00DBC47A /* ViewController.m */; };
 		D430508B2270AE4A00DBC47A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D43050892270AE4A00DBC47A /* Main.storyboard */; };
@@ -16,6 +18,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B7F5B39E22730F0200A60953 /* TextCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TextCell.h; sourceTree = "<group>"; };
+		B7F5B39F22730F0200A60953 /* TextCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TextCell.m; sourceTree = "<group>"; };
+		B7F5B3A122730F4700A60953 /* UIView+Shadow.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+Shadow.h"; sourceTree = "<group>"; };
+		B7F5B3A222730F4700A60953 /* UIView+Shadow.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+Shadow.m"; sourceTree = "<group>"; };
 		D43050802270AE4A00DBC47A /* SectionCorner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SectionCorner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D43050832270AE4A00DBC47A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D43050842270AE4A00DBC47A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -62,6 +68,10 @@
 				D43050842270AE4A00DBC47A /* AppDelegate.m */,
 				D43050862270AE4A00DBC47A /* ViewController.h */,
 				D43050872270AE4A00DBC47A /* ViewController.m */,
+				B7F5B39E22730F0200A60953 /* TextCell.h */,
+				B7F5B39F22730F0200A60953 /* TextCell.m */,
+				B7F5B3A122730F4700A60953 /* UIView+Shadow.h */,
+				B7F5B3A222730F4700A60953 /* UIView+Shadow.m */,
 				D43050892270AE4A00DBC47A /* Main.storyboard */,
 				D430508C2270AE4C00DBC47A /* Assets.xcassets */,
 				D430508E2270AE4C00DBC47A /* LaunchScreen.storyboard */,
@@ -143,6 +153,8 @@
 			files = (
 				D43050882270AE4A00DBC47A /* ViewController.m in Sources */,
 				D43050932270AE4C00DBC47A /* main.m in Sources */,
+				B7F5B3A322730F4700A60953 /* UIView+Shadow.m in Sources */,
+				B7F5B3A022730F0200A60953 /* TextCell.m in Sources */,
 				D43050852270AE4A00DBC47A /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -286,7 +298,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = KNF25R344F;
 				INFOPLIST_FILE = SectionCorner/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -302,7 +316,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = KNF25R344F;
 				INFOPLIST_FILE = SectionCorner/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
